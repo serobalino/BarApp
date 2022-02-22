@@ -75,7 +75,7 @@ public class Inventory {
     /**
      * Initial function to collect all inventory values
      */
-    public void setInventory() {
+    private void setInventory() {
         System.out.println("Por favor ingresa tu inventario actual");
         setICE_ML();
         setMILK_ML();
