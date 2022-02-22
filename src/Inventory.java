@@ -11,6 +11,10 @@ public class Inventory {
     private float BANANA_G;
     private float MANGO_G;
 
+    Inventory(){
+        this.setInventory();
+    }
+
     /**
      * Get Attributes of Inventory
      *
@@ -52,29 +56,40 @@ public class Inventory {
     }
 
     public void setSUGAR_G() {
-        this.SUGAR_G = SUGAR_G;
+        this.SUGAR_G = this.setIngredient("Cantidad de Azúcar [g]: ");
     }
 
     public void setSTRAWBERRY_G() {
-        this.STRAWBERRY_G = STRAWBERRY_G;
+        this.STRAWBERRY_G = this.setIngredient("Cantidad de strawberries [g]: ");
     }
 
     public void setBANANA_G() {
-        this.BANANA_G = BANANA_G;
+        this.BANANA_G = this.setIngredient("Cantidad de bananas [g]: ");
     }
 
     public void setMANGO_G() {
-        this.MANGO_G = MANGO_G;
+        this.MANGO_G = this.setIngredient("Cantidad de mango [g]: ");
     }
 
 
+    /**
+     * Initial function to collect all inventory values
+     */
     public void setInventory() {
         System.out.println("Por favor ingresa tu inventario actual");
         setICE_ML();
         setMILK_ML();
-        System.out.println(" Hielo " + this.ICE_ML + "   Milk " + this.MILK_ML);
+        setSUGAR_G();
+        setSTRAWBERRY_G();
+        setBANANA_G();
+        setMANGO_G();
     }
 
+    /**
+     * Function to input and set vars in class from keyboard
+     * @param msg
+     * @return
+     */
     private float setIngredient(String msg) {
         System.out.print("> " + msg);
         Scanner keyboard = new Scanner(System.in);
