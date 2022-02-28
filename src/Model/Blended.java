@@ -2,7 +2,8 @@ package model;
 
 public class Blended {
     private String name;
-    private float quantity = 100;
+    private float quantityNeed;
+    private float product;
 
     public String getName() {
         return name;
@@ -12,16 +13,25 @@ public class Blended {
         this.name = name;
     }
 
-    public float getQuantity() {
-        return quantity;
+    public float getQuantityNeed() {
+        return quantityNeed;
     }
 
-    public void setQuantity(float quantity) {
-        this.quantity = quantity;
+    public void setQuantityNeed(float quantityNeed) {
+        this.quantityNeed = quantityNeed;
     }
 
-    public Blended(String name, float quantity) {
+    public float getProduct() {
+        return product;
+    }
+
+    public void setProduct(float product) {
+        this.product = product;
+    }
+
+    public Blended(String name, float quantityNeed, float product) {
         this.name = name;
-        this.quantity = quantity;
+        this.quantityNeed = quantityNeed;
+        this.product = product;
     }
 }
